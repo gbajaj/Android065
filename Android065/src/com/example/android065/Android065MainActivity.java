@@ -34,7 +34,7 @@ public class Android065MainActivity extends Activity {
         		}else{
         			frame.stop();
         			frame.start();
-        		}
+        		}	
 
         	}
         });

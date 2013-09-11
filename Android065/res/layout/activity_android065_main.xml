@@ -27,6 +27,6 @@
         android:id="@+id/iv_animacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/bird1" />
+        android:src="@drawable/d1" />
 
 </LinearLayout>
