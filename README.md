@@ -1,0 +1,4 @@
+Android065
+==========
+
+AnimationDrawable.
