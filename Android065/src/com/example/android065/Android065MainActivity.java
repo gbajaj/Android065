@@ -21,24 +21,28 @@ public class Android065MainActivity extends Activity {
 		
 		
 		bt_iniciar = (Button)findViewById(R.id.bt_iniciar);
-        bt_iniciar.setOnClickListener(new OnClickListener(){
+               nbt_iniciar.setOnClickListener(new OnClickListener(){
         	@Override
-        	public void onClick(View v){
-        		
-        		imgView =(ImageView) findViewById(R.id.iv_animacion);
-            	imgView.setBackgroundResource(R.drawable.frame_animation);
-            	AnimationDrawable frame = (AnimationDrawable) imgView.getBackground();
-            	
-            	if(frame.isRunning()){
-        			frame.stop();
-        		}else{
-        			frame.stop();
-        			frame.start();
-        		}	
+		public void onClick(View v) {
 
-        	}
-        });
-        
+		    imgView = (ImageView) findViewById(R.id.iv_animacion);
+		    imgView.setBackgroundResource(R.drawable.frame_animation);
+	
+		    imgView.post(new Runnable() {
+		        @Override
+		        public void run() {
+		            AnimationDrawable frame = (AnimationDrawable) imgView
+								.getBackground();
+		            if (frame.isRunning()) {
+		                frame.stop();
+		            } else {
+		                frame.stop();
+		                frame.start();
+		            }
+		        }
+		    });
+		}
+	    });
 	}
 
 	@Override
